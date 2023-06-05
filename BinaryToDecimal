@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class BinaryToDecimal{
+    public static void main(String[] args) throws Exception {
+       Scanner sc = new Scanner(System.in);
+       int n, d=0, w=0;
+
+       System.out.print("Enter a binary number: ");
+       int binary = sc.nextInt();
+
+       while(binary>0){
+        n = binary%10;
+
+        d += n * Math.pow(2,w);
+
+        binary = binary/10;
+
+        w += 1;
+
+
+       }
+
+       System.out.println("Decimal: " + d);
+    }
+}
+
