@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class DecimalToBinary{
+    public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a Decimal number: ");
+        int dec = sc.nextInt();
+        String bin = "";
+
+        if (dec == 0){
+            bin = "0";
+
+        } else {
+            while (dec > 0){
+                int remainder = dec % 2;
+                bin = remainder + bin;
+                dec /= 2;
+            }
+        }
+
+        System.out.println(bin);
+        
+    }
+}
+
